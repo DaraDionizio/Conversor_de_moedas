@@ -19,28 +19,81 @@
 
     <header>
         <nav class="menu">
-            <div><h3>Aurum Invest</h3></div>
-            
-            <div> 
+            <div>
+                <h3>Aurum Invest</h3>
+            </div>
+
+            <div>
                 <ul class="menu_items">
-                <li>sobre</li>
-                <li>investimentos</li>
-                <li>atendimento</li>
-            </ul></div>
-           
+                    <li>sobre</li>
+                    <li>investimentos</li>
+                    <li>atendimento</li>
+                </ul>
+            </div>
         </nav>
+
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget"><a href="https://www.tradingview.com/markets/"
+                    rel="noopener nofollow" target="_blank"></a></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
+                async>
+                    {
+                        "symbols": [
+                            {
+                                "proName": "FOREXCOM:SPXUSD",
+                                "title": "S&P 500 Index"
+                            },
+                            {
+                                "proName": "FOREXCOM:NSXUSD",
+                                "title": "US 100 Cash CFD"
+                            },
+                            {
+                                "proName": "FX_IDC:EURUSD",
+                                "title": "EUR to USD"
+                            },
+                            {
+                                "proName": "BITSTAMP:BTCUSD",
+                                "title": "Bitcoin"
+                            },
+                            {
+                                "proName": "BITSTAMP:ETHUSD",
+                                "title": "Ethereum"
+                            }
+                        ],
+                            "colorTheme": "light",
+                                "locale": "en",
+                                    "largeChartUrl": "",
+                                        "isTransparent": false,
+                                            "showSymbolLogo": true
+                    }
+                </script>
+        </div>
+        <!-- TradingView Widget END -->
+
     </header>
     <main>
         <section class="sectionPrincipal">
-            <h1>Aurum Invest</h1>
+            <div class="texto_section">
+                <!-- <h2>Aurum Invest</h2> -->
+            <h2>USD - 2025</h2>
+            <p>Dólar Americano</p>
+            </div>
+            
+
+            <div id="chartContainer">
+                <canvas id="graficoDolar"></canvas>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
         </section>
-        <section>
+        <section class="sectionConversor">
             <div class="div_conversor">
-                
-                <!-- <span>Converta valores entre diferentes moedas em tempo real</span> -->
 
-
-                <form class="conversor-form" id="conversorForm"><h3>Conversor de moeda</h3>
+                <form class="conversor-form" id="conversorForm">
+                    <h3>Conversor de moeda</h3>
                     <div class="moeda-row">
                         <div class="moeda-input">
                             <label for="quantidade">De</label>
@@ -115,6 +168,17 @@
             </div>
         </section>
     </main>
+    <footer class="site-footer">
+  <div class="footer-disclaimer">
+    <p>As informações apresentadas neste site possuem caráter apenas informativo e não constituem recomendação de investimento.</p>
+  </div>
+
+  <div class="footer-credits">
+    <p>Desenvolvido por Dara Dionizio</p>
+    <p>© 2025 Aurum Invest — Todos os direitos reservados.</p>
+  </div>
+    </footer>
+
 </body>
 <script src="JavaScript/script.Js"></script>
 

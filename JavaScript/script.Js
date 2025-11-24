@@ -12,6 +12,7 @@ const API_URL = "https://api.exchangerate-api.com/v4/latest/"
 
 async function conversaoMoney(){
     loading.style.display = "block";
+    erro.style.display = "none";
 
     try{
         const response = await fetch(API_URL + entradaMoeda.value) //await : espera, fetch: para acessar o servidor
@@ -30,12 +31,45 @@ async function conversaoMoney(){
             </div>
             `
 
-    } catch(erro){
+    } catch(error){
         alert("Falha no servidor");
+        erro.style.display= "block"
+        erro.innerHTML = `Falha ao converter moeda! Tente novamente`
     }
+    loading.style.display= "none"
 }
 
 form.addEventListener("submit", function(cliqueBtn){
     cliqueBtn.preventDefault() // para não limpar o formulario
     conversaoMoney()
 })
+
+// GRAFICO SECTION PRINCIPAL
+
+const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const usd_brl = [4.90,4.95,5.10,5.05,5.12,5.18,5.22,5.15,5.25,5.30,5.28,5.35];
+
+new Chart(document.getElementById("graficoDolar"), {
+  type: "line",
+  data: {
+    labels: months,
+    datasets: [{
+      data: usd_brl,
+      borderWidth: 3,
+      borderColor: "white",
+      pointRadius: 2,
+      fill: true
+    }]
+  },
+  options: {
+    plugins: { legend: { display: false }},
+    scales: {
+        y: { beginAtZero: false, grid: { display: false }, ticks: { display: false }},
+        x: {grid: { display: false, beginAtZero: false}}
+    }
+  }
+});
+
+
+
+
