@@ -7,6 +7,7 @@
     <title>Aurum Invest</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,500;1,14..32,500&display=swap"
         rel="stylesheet">
 
@@ -24,10 +25,18 @@
             </div>
 
             <div>
-                <ul class="menu_items">
-                    <li>sobre</li>
-                    <li>investimentos</li>
-                    <li>atendimento</li>
+                <ul class=" menu_items">
+                    <a href="#sobre" style="text-decoration: none; font-style: none; color: grey;">
+                        <li>sobre</li>
+                    </a>
+                    <a href="#investimentos" style="text-decoration: none; font-style: none; color: grey;">
+                        <li>investimentos</li>
+                    </a>
+
+                    <a href="#atendimento" style="text-decoration: none; font-style: none; color: grey;">
+                        <li>atendimento</li>
+                    </a>
+
                 </ul>
             </div>
         </nav>
@@ -35,8 +44,8 @@
         <!-- TradingView Widget BEGIN -->
         <div class="tradingview-widget-container">
             <div class="tradingview-widget-container__widget"></div>
-            <div class="tradingview-widget"><a href="https://www.tradingview.com/markets/"
-                    rel="noopener nofollow" target="_blank"></a></div>
+            <div class="tradingview-widget"><a href="https://www.tradingview.com/markets/" rel="noopener nofollow"
+                    target="_blank"></a></div>
             <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js"
                 async>
                     {
@@ -77,10 +86,10 @@
         <section class="sectionPrincipal">
             <div class="texto_section">
                 <!-- <h2>Aurum Invest</h2> -->
-            <h2>USD - 2025</h2>
-            <p>Dólar Americano</p>
+                <h2>USD - 2025</h2>
+                <p>Dólar Americano</p>
             </div>
-            
+
 
             <div id="chartContainer">
                 <canvas id="graficoDolar"></canvas>
@@ -89,7 +98,7 @@
             <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         </section>
-        <section class="sectionConversor">
+        <section class="sectionConversor" href>
             <div class="div_conversor">
 
                 <form class="conversor-form" id="conversorForm">
@@ -101,7 +110,7 @@
                                 required>
                         </div>
 
-                        <div class="moeda-select">
+                        <div class="moeda-select" id="investimentos">
                             <label for="entradaMoeda"></label>
 
                             <select id="entradaMoeda" required>
@@ -168,15 +177,16 @@
             </div>
         </section>
     </main>
-    <footer class="site-footer">
-  <div class="footer-disclaimer">
-    <p>As informações apresentadas neste site possuem caráter apenas informativo e não constituem recomendação de investimento.</p>
-  </div>
+    <footer class="site-footer" id="sobre">
+        <div class="footer-disclaimer">
+            <p>As informações apresentadas neste site possuem caráter apenas informativo e não constituem recomendação
+                de investimento.</p>
+        </div>
 
-  <div class="footer-credits">
-    <p>Desenvolvido por Dara Dionizio</p>
-    <p>© 2025 Aurum Invest — Todos os direitos reservados.</p>
-  </div>
+        <div class="footer-credits" id="atendimento">
+            <p>Desenvolvido por Dara Dionizio</p>
+            <p>© 2025 Aurum Invest — Todos os direitos reservados.</p>
+        </div>
     </footer>
 
 </body>
